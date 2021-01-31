@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Test</title>
+<title>ListePatients</title>
 <style>
 td,
 th {
@@ -38,7 +38,7 @@ table {
 </style>
 </head>
 <body style="background-color:teal;">
-<h2 style="color:white;font-weight:bold;text-align:center;">Liste des medecins</h2>
+<h2 style="color:white;font-weight:bold;text-align:center;">Liste des patients</h2>
 <table>
 	<tr>
 		<th scope="col">Email</th>
@@ -46,6 +46,7 @@ table {
         <th scope="col">Prenom</th>
         <th scope="col">Adresse</th>
         <th scope="col">Numero_Tel</th>
+        <th scope="col">Annee_Naissance</th>
         <th scope="col">Password</th>
 	</tr>
 	<c:forEach var="user" items="${ utilisateurs }">
@@ -55,6 +56,7 @@ table {
 			<td><c:out value="${ user.prenom }" /></td>
 			<td><c:out value="${ user.adresse }" /></td>
 			<td><c:out value="${ user.numero_tel }" /></td>
+			<td><c:out value="${ user.annee_naissance }" /></td>
 			<td><c:out value="${ user.password }" /></td>
 		</tr>
 	</c:forEach>	

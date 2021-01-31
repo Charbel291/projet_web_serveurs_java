@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Test</title>
+<title>ListeMedecins</title>
 <style>
 td,
 th {
