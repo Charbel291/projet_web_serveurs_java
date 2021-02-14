@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<web-app
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	
+	<servlet>
+		<servlet-name>Test</servlet-name>
+		<servlet-class>com.octest.servlet.Test</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Test</servlet-name>
+		<url-pattern>/bonjour</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Accueil</servlet-name>
+		<servlet-class>com.octest.servlet.Accueil</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Accueil</servlet-name>
+		<url-pattern>/accueil</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Contact</servlet-name>
+		<servlet-class>com.octest.servlet.Contact</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Contact</servlet-name>
+		<url-pattern>/contact</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Planning</servlet-name>
+		<servlet-class>com.octest.servlet.Planning</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Planning</servlet-name>
+		<url-pattern>/planning</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>InscriptionPatient</servlet-name>
+		<servlet-class>com.octest.servlet.InscriptionPatient</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InscriptionPatient</servlet-name>
+		<url-pattern>/inscriptionpatient</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SessionPatient</servlet-name>
+		<servlet-class>com.octest.servlet.SessionPatient</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SessionPatient</servlet-name>
+		<url-pattern>/sessionpatient</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ClientUpdate</servlet-name>
+		<servlet-class>com.octest.servlet.ClientUpdate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ClientUpdate</servlet-name>
+		<url-pattern>/clientupdate</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConnexionPatient</servlet-name>
+		<servlet-class>com.octest.servlet.ConnexionPatient</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConnexionPatient</servlet-name>
+		<url-pattern>/connexionpatient</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SelectionCentre</servlet-name>
+		<servlet-class>com.octest.servlet.SelectionCentre</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SelectionCentre</servlet-name>
+		<url-pattern>/selectioncentre</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Reservation</servlet-name>
+		<servlet-class>com.octest.servlet.Reservation</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Reservation</servlet-name>
+		<url-pattern>/reservation</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CompteRdvs</servlet-name>
+		<servlet-class>com.octest.servlet.CompteRdvs</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CompteRdvs</servlet-name>
+		<url-pattern>/mesrdvs</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConnexionMedecin</servlet-name>
+		<servlet-class>com.octest.servlet.ConnexionMedecin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConnexionMedecin</servlet-name>
+		<url-pattern>/connexionmedecin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConnexionAdmin</servlet-name>
+		<servlet-class>com.octest.servlet.ConnexionAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConnexionAdmin</servlet-name>
+		<url-pattern>/connexionadmin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SessionMedecin</servlet-name>
+		<servlet-class>com.octest.servlet.SessionMedecin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SessionMedecin</servlet-name>
+		<url-pattern>/sessionmedecin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ListeRdvs</servlet-name>
+		<servlet-class>com.octest.servlet.ListeRdvs</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListeRdvs</servlet-name>
+		<url-pattern>/listerdvs</url-pattern>
+	</servlet-mapping>
+	
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+		</jsp-property-group>
+	</jsp-config>
+	
+	
+</web-app>
+
+

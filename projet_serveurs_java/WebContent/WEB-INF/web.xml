@@ -21,16 +21,38 @@
 			<servlet-class>com.octest.servlets.ListePatients</servlet-class>
 		</servlet>
 		
-		<servlet-mapping>
+			<servlet-mapping>
 			<servlet-name>ListePatients</servlet-name>
 			<url-pattern>/listepatients</url-pattern>
 		</servlet-mapping>
 		
+		<servlet-mapping>
+			<servlet-name>AnnuaireMedecins</servlet-name>
+			<url-pattern>/annuairemedecins</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+			<servlet-name>AnnuaireMedecins</servlet-name>
+			<servlet-class>com.octest.servlets.AnnuaireMedecins</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+			<servlet-name>ListeRendezVous</servlet-name>
+			<url-pattern>/listerendezvous</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+			<servlet-name>ListeRendezVous</servlet-name>
+			<servlet-class>com.octest.servlets.ListeRendezVous</servlet-class>
+		</servlet>
+		
+
 		<jsp-config>
 			<jsp-property-group>
 				<url-pattern>*.jsp</url-pattern>
 				<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
 			</jsp-property-group>
 		</jsp-config>
+		
 		
 </web-app>

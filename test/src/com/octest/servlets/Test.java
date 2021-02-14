@@ -2,6 +2,7 @@ package com.octest.servlets;
 
 import java.io.IOException;
 
+
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
@@ -10,7 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.octest.bdd.Noms;
+import com.octest.bdd.CompteMedecin;
+import com.octest.bdd.ComptePatient;
+import com.octest.beans.Utilisateur;
 
 
 @WebServlet("/Test")
@@ -25,9 +28,9 @@ public class Test extends HttpServlet {
     }
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Noms tableNoms = new Noms();
-		request.setAttribute("utilisateurs", tableNoms.recupererUtilisateurs());
-		System.out.println(tableNoms.recupererUtilisateurs().size());
+		CompteMedecin tableMedecins = new CompteMedecin();
+		request.setAttribute("utilisateurs", tableMedecins.recupererMedecins());
+		System.out.println(tableMedecins.recupererMedecins().size());
 		String message = "au revoir";
 		request.setAttribute("variable", message);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/bonjour.jsp").forward(request, response);
@@ -35,7 +38,7 @@ public class Test extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/bonjour.jsp").forward(request, response);
 	}
 
 }

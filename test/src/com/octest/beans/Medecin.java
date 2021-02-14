@@ -1,56 +1,76 @@
 package com.octest.beans;
 
 public class Medecin {
-	private String id;
+	private String email;
 	private String nom;
 	private String prenom;
-	private String specialite;
-	private CentreMedical centre_medical;
+	private String numero_tel;
+	private String adresse;
+	private String password;
 	
-	public Medecin(String nom, String prenom, String specialite) {
+	public Medecin(String email, String nom, String prenom, String numero_tel, String adresse, String password) {
+		this.email=email;
 		this.nom=nom;
 		this.prenom=prenom;
-		this.specialite=specialite;
-		this.id=nom.substring(0,2)+prenom.substring(0,2)+specialite.substring(0,2);
+		this.numero_tel=numero_tel;
+		this.adresse=adresse;
+		this.password=password;
 	}
 	
-	public String getSpecialite() {
-		return specialite;
+	public String getAdresse() {
+		return adresse;
 	}
-	public String getId() {
-		return id;
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
 	}
-	public void setId(String id) {
-		this.id = id;
+	
+	public String getEmail() {
+		return email;
 	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public String getNom() {
 		return nom;
 	}
+
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
+	
 	public String getPrenom() {
 		return prenom;
 	}
+
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	public void setSpecialite(String specialite) {
-		this.specialite = specialite;
+	
+	public String getNumero_tel() {
+		return numero_tel;
 	}
-	public CentreMedical getCentre_medical() {
-		return centre_medical;
-	}
-	public void setCentre_medical(CentreMedical centre_medical) {
-		this.centre_medical = centre_medical;
+
+	public void setNumero_tel(String numero_tel) {
+		this.numero_tel = numero_tel;
 	}
 	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if(obj instanceof Medecin) {
 			Medecin medecin = (Medecin) obj;
-			String id = medecin.getId();
-			if(this.id.equals(id)){
+			String email = medecin.getEmail();
+			if(this.email.equals(email)){
 				return true;
 			}else{
 				return false;
@@ -59,10 +79,10 @@ public class Medecin {
 			return false;
 		}
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Dr "+prenom+" "+nom+" ,"+specialite;
+		return email+" Dr "+prenom+" "+nom+" ,";
 	}
 	
 }

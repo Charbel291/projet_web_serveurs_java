@@ -1,6 +1,7 @@
 package com.octest.bdd;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -69,7 +70,7 @@ private Connection connexion;
 		}
 	}
 	
-	public void ajouterPatient(Medecin medecin) {
+	public void ajouterMedecin(Medecin medecin) {
 		loadDatabase();
 	
 		try {

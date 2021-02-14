@@ -11,16 +11,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Test</servlet-name>
-		<url-pattern>/bonjour</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>Accueil</servlet-name>
-		<servlet-class>com.octest.servlets.Accueil</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Accueil</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>/Test</url-pattern>
 	</servlet-mapping>
 	<jsp-config>
 		<jsp-property-group>

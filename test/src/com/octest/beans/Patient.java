@@ -1,25 +1,57 @@
 package com.octest.beans;
 
-import java.time.LocalDate;
-
 public class Patient {
-	private String id;
+	private String email;
 	private String nom;
 	private String prenom;
-	private String email;
-	private int age;
-	private Gender sexe;
-	private LocalDate date_naissance;
-
-	public Patient(String nom, String prenom,int age,Gender sexe) {
+	private String numero_tel;
+	private String adresse;
+	private String annee_naissance;
+	private String password;
+	
+	public Patient(String email, String nom, String prenom, String numero_tel, String adresse, String annee_naissance, String password) {
+		this.email=email;
 		this.nom=nom;
 		this.prenom=prenom;
-		this.age=age;
-		this.sexe=sexe;
-		this.id=nom.substring(0,2)+prenom.substring(0,2)+age;
+		this.numero_tel=numero_tel;
+		this.adresse = adresse;
+		this.annee_naissance=annee_naissance;
+		this.password=password;
 	}
 	
-	public enum Gender { M, F }
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	
+	public String getNumero_tel() {
+		return numero_tel;
+	}
+
+	public void setNumero_tel(String numero_tel) {
+		this.numero_tel = numero_tel;
+	}
+
+	public String getAnnee_naissance() {
+		return annee_naissance;
+	}
+
+	public void setAnnee_naissance(String annee_naissance) {
+		this.annee_naissance = annee_naissance;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 
 	public String getNom() {
 		return nom;
@@ -44,45 +76,13 @@ public class Patient {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public Gender getSexe() {
-		return sexe;
-	}
-
-	public void setSexe(Gender sexe) {
-		this.sexe = sexe;
-	}
-
-	public LocalDate getDate_naissance() {
-		return date_naissance;
-	}
-
-	public void setDate_naissance(LocalDate date_naissance) {
-		this.date_naissance = date_naissance;
-	}
-	
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
 	
 	@Override
 	public boolean equals(Object obj) {
 		if(obj instanceof Patient) {
 			Patient patient = (Patient) obj;
-			String id = patient.getId();
-			if(this.id.equals(id)){
+			String email = patient.getEmail();
+			if(this.email.equals(email)){
 				return true;
 			}else{
 				return false;
@@ -94,7 +94,7 @@ public class Patient {
 	
 	@Override
 	public String toString() {
-		return "id = "+id+" "+prenom+" "+nom+", "+age;
+		return email+" "+prenom+" "+nom;
 	}
 	
 }
